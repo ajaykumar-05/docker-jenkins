@@ -1,0 +1,29 @@
+version: '3'
+services:
+  movies:
+    image: ajaykumar05/moviesservice:latest
+    ports:
+      - "80:80"
+    deploy:
+      replicas: 3
+
+  train:
+    image: ajaykumar05/trainservice:latest
+    ports:
+      - "81:80"
+    deploy:
+      replicas: 3
+
+  dth:
+    image: ajaykumar05/dthservice:latest
+    ports:
+      - "82:80"
+    deploy:
+      replicas: 3
+
+  recharge:
+    image: ajaykumar05/rechargeservice:latest
+    ports:
+      - "83:80"
+    deploy:
+      replicas: 3
